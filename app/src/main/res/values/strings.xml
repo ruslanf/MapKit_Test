@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MapKit Test</string>
+
+    <string name="fragment_route_error_location">An error occurred while getting current location</string>
+
+    <string name="search">Search address</string>
+    
+    <string name="map_address_search_hint">Поиск по адресу</string>
+    <string name="geo_tag_send_title">Отправить метку на карте</string>
+    <string name="geo_tag_marked_title">Отмеченная точка</string>
+    <string name="geo_tag_send_self_title">Поделиться моим местоположением</string>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="48dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp"/>
+
+    <!--GeoTag-->
+    <ImageView
+        android:id="@+id/geoTagPinIV"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineV"
+        app:layout_constraintTop_toTopOf="@+id/sendGeoTagTV"
+        app:layout_constraintBottom_toBottomOf="@+id/geoTagTV"
+        app:srcCompat="@drawable/ic_map_pin" />
+
+    <TextView
+        android:id="@+id/sendGeoTagTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/geo_tag_send_title"
+        android:textColor="@color/butImageTextColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVEnd"
+        app:layout_constraintStart_toEndOf="@+id/guidelineV"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH" />
+
+    <TextView
+        android:id="@+id/geoTagTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textSubtitlePhone"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVEnd"
+        app:layout_constraintStart_toStartOf="@+id/sendGeoTagTV"
+        app:layout_constraintTop_toBottomOf="@+id/sendGeoTagTV"
+        tools:ignore="SmallSp"
+        tools:text="Россия, Краснодарский край, с.Безымянное" />
+
+    <View
+        android:id="@+id/geoTagV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH"
+        app:layout_constraintBottom_toBottomOf="@+id/geoTagTV"
+        app:layout_constraintStart_toStartOf="@+id/geoTagPinIV"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVEnd"/>
+
+    <!--Self GeoTag-->
+    <ImageView
+        android:id="@+id/selfGeoTagPinIV"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineV"
+        app:layout_constraintTop_toTopOf="@+id/sendSelfGeoTagTV"
+        app:layout_constraintBottom_toBottomOf="@+id/selfGeoTagTV"
+        app:srcCompat="@drawable/ic_map_pin" />
+
+    <TextView
+        android:id="@+id/sendSelfGeoTagTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/geo_tag_send_self_title"
+        android:textColor="@color/butImageTextColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVEnd"
+        app:layout_constraintStart_toEndOf="@+id/guidelineV"
+        app:layout_constraintTop_toBottomOf="@+id/geoTagTV" />
+
+    <TextView
+        android:id="@+id/selfGeoTagTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textSubtitlePhone"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVEnd"
+        app:layout_constraintStart_toStartOf="@+id/sendSelfGeoTagTV"
+        app:layout_constraintTop_toBottomOf="@+id/sendSelfGeoTagTV"
+        tools:ignore="SmallSp"
+        tools:text="Россия, Краснодар, пос. Плодородный, ул. Дзержинского, 210" />
+
+    <View
+        android:id="@+id/selfGeoTagV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/sendSelfGeoTagTV"
+        app:layout_constraintBottom_toBottomOf="@+id/selfGeoTagTV"
+        app:layout_constraintStart_toStartOf="@+id/selfGeoTagPinIV"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVEnd"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
